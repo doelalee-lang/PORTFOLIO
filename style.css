@@ -448,7 +448,9 @@ nav a {
   font-size: 1.9cqw;
   line-height: 1;
 
-  color: #1f1f1f;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
   -webkit-text-stroke: 0.5px #777777;
 }
 
