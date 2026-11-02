@@ -536,6 +536,23 @@ nav a {
 
 @media (max-width: 768px) {
 
+  
+  .header {
+    padding: 22px 20px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+  
   .about {
     min-height: auto;
 
