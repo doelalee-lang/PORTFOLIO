@@ -99,24 +99,11 @@ nav a {
 
   object-fit: cover;
 
+  opacity: 0.7;
+
   z-index: 1;
 }
 
-
-/* VIDEO OVERLAY */
-
-.index-hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: #000000;
-
-  opacity: 0;
-
-  z-index: 10;
-
-  pointer-events: none;
-}
 
 
 
@@ -141,10 +128,10 @@ nav a {
 .index-hero-title h1 {
   margin: 0;
 
-  font-size: 20cqw;
+  font-size: 10cqw;
   line-height: 0.9;
 
-  font-weight: 200;
+  font-weight: 100;
   letter-spacing: -0.07em;
 }
 
@@ -161,7 +148,7 @@ nav a {
   font-size: 1.45cqw;
   line-height: 1;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 
@@ -210,7 +197,7 @@ nav a {
 
   letter-spacing: -0.03em;
 
-  font-weight: 600;
+  font-weight: 100;
 }
 
 
@@ -354,7 +341,20 @@ nav a {
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
+  overflow: hidden;
 }
+
+
+
+.about-main,
+.about-divider,
+.about-contact {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 /* ========================================
@@ -362,6 +362,8 @@ nav a {
 ======================================== */
 
 .about-main {
+  position: relative;
+  z-index: 1;
   flex: 1;
 
   display: grid;
@@ -379,19 +381,7 @@ nav a {
   display: flex;
   flex-direction: column;
 
-  padding-top: 5cqw;
-}
-
-
-.about-small-title {
-  margin: 0 0 5cqw;
-
-  font-size: 1.5cqw;
-  font-weight: 500;
-
-  color: #777777;
-
-  -webkit-text-stroke: 0.5px #aaaaaa;
+  padding-top: 13cqw;
 }
 
 
@@ -409,56 +399,6 @@ nav a {
 }
 
 
-/* ========================================
-   FORMULA
-======================================== */
-
-.about-formula {
-  margin-top: 2cqw;
-
-  display: flex;
-  align-items: flex-start;
-
-  gap: 1.3cqw;
-}
-
-
-.formula-item {
-  min-width: 4.5cqw;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-}
-
-
-.formula-item strong {
-  font-size: 2.6cqw;
-
-  line-height: 1;
-
-  font-weight: 400;
-}
-
-
-.formula-item span {
-  margin-top: 0.9cqw;
-
-  font-size: 0.9cqw;
-
-  white-space: nowrap;
-}
-
-
-.formula-symbol {
-  padding-top: 1cqw;
-
-  font-size: 1.6cqw;
-
-  line-height: 1;
-}
-
 
 /* ========================================
    INTRO DESCRIPTION
@@ -467,7 +407,7 @@ nav a {
 .about-description {
   width: 70%;
 
-  margin: 4cqw 0 0;
+  margin: 2.5cqw 0 0;
 
   font-size: 1.2cqw;
   line-height: 2;
@@ -508,9 +448,8 @@ nav a {
   font-size: 1.9cqw;
   line-height: 1;
 
-  color: transparent;
-
-  -webkit-text-stroke: 0.7px #777777;
+  color: #1f1f1f;
+  -webkit-text-stroke: 4.5px #777777;
 }
 
 
@@ -911,14 +850,12 @@ nav a {
 }
 
 .next-project p {
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 .next-project a {
-  font-size: clamp(40px, 12vw, 100px);
-
+  font-size: 6vw;
   line-height: 1;
-
   letter-spacing: -0.07em;
 }
 
@@ -1029,9 +966,10 @@ nav a {
 
   text-align: center;
 
-  font-size: 0.94cqw;
+  font-size: 1.1cqw;
   line-height: 1.7;
   color: #2c2c2c;
+  font-weight: 500;
 
   word-break: keep-all;
 }
@@ -1085,32 +1023,32 @@ nav a {
 
 .section-label-light {
   font-size: 0.9cqw;
-  margin-bottom: 1.6cqw;
+  margin-bottom: 2cqw;
 }
 
 .story-content h2 {
   margin: 0;
   max-width: 70%;
 
-  font-size: 2.0cqw;
-  line-height: 1.25;
+  font-size: 2.3cqw;
+  line-height: 1.5;
 
-  letter-spacing: -0.05em;
+  letter-spacing: 0em;
   font-weight: 700;
 }
 
 .story-description {
-  font-size: 0.9cqw;
+  font-size: 1.0cqw;
   line-height: 1.7;
   margin: 30;
   max-width: 80%;
 }
 
 .story-diagram {
-  width: 64%;
+  width: 61%;
   height: auto;
 
-  margin: 2.2cqw auto 0;
+  margin: 1cqw auto 0;
 
   display: block;
 }
@@ -1196,6 +1134,8 @@ nav a {
   grid-template-columns: 40% 60%;
   gap: 0;
   align-items: stretch;
+
+  container-type: inline-size;
 }
 
 
@@ -1209,33 +1149,35 @@ nav a {
   align-items: center;
   justify-content: center;
 
-  padding: clamp(30px, 5vw, 100px);
+  padding: 4cqw;
 }
 
 .grizen-logo-image {
   display: block;
 
   width: 70%;
-  max-width: 600px;
+  max-width: none;
   height: auto;
 
-  margin: 0 auto 35px;
+  margin: 0 auto 1.8cqw;
 }
 
 .grizen-logo-text {
   width: 100%;
-  max-width: 850px;
+  max-width: none;
 
   margin: 0 auto;
 
-  font-size: 15px;
+  font-size: 0.9cqw;
   line-height: 1.7;
-  letter-spacing: -0.02em;
+  font-weight: 600;
 
+  letter-spacing: -0.02em;
   text-align: center;
   color: #555555;
 
   word-break: keep-all;
+  
 }
 
 
@@ -1269,21 +1211,7 @@ nav a {
 }
 
 
-/* MOBILE */
 
-@media (max-width: 800px) {
-
-  .grizen-system-row {
-    grid-template-columns: 1fr !important;
-    gap: 70px;
-    margin-bottom: 70px;
-  }
-
-  .grizen-logo-image {
-    width: 100%;
-  }
-
-}
 
 
 /* ========================================
@@ -1382,19 +1310,96 @@ nav a {
 
 .morphix-overview {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  background: #000000;
+  color: #ffffff;
 
-  background: #ffffff;
+  padding: 0cqw;
+
+  container-type: inline-size;
 }
 
-.morphix-overview img {
-  display: block;
+
+.morphix-overview-inner {
+  width: 100%;
+  min-height: 42cqw;
+
+  display: grid;
+  grid-template-columns: 38% 62%;
+
+  align-items: center;
+}
+
+
+/* LEFT TEXT */
+
+.morphix-overview-text {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4cqw;
+
+  padding-left: 8cqw;
+}
+
+
+.morphix-overview-block {
+  width: 130%;
+}
+
+
+.morphix-overview-block h2 {
+  margin: 0 0 0.8cqw;
+
+  font-size: 3cqw;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+
+.morphix-overview-block p {
+  margin: 0;
+
+  font-size: 1cqw;
+  line-height: 1.65;
+
+  color: #d5d5d5;
+
+  word-break: keep-all;
+}
+
+
+/* RIGHT IMAGE */
+
+.morphix-overview-image {
+  position: relative;
 
   width: 100%;
-  height: auto;
+  height: 42cqw;
 
-  margin: 0;
+  overflow: hidden;
+}
+
+
+.morphix-overview-image img {
+  position: absolute;
+
+  top: 50%;
+  right: -2cqw;
+
+  transform: translateY(-50%);
+
+  width: 105%;
+  height: 150%;
+
+  object-fit: contain;
+  object-position: center right;
+
+  display: block;
 }
 
 
@@ -1424,6 +1429,8 @@ nav a {
 
   font-size: 1.5cqw;
   letter-spacing: 0.05em;
+
+  font-weight: 700;
 }
 
 
@@ -1452,6 +1459,8 @@ nav a {
 
   font-size: 1.5cqw;
   letter-spacing: 0.05em;
+
+  font-weight: 700;
 }
 
 
@@ -1471,11 +1480,82 @@ nav a {
 }
 
 
-.morphix-value-grid img {
+/* 각각의 Core Value 카드 */
+
+.morphix-value-card {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+  border-radius: 1.2cqw;
+}
+
+
+/* 이미지 */
+
+.morphix-value-card img {
+  display: block;
+
   width: 100%;
   height: auto;
+}
 
-  display: block;
+
+/* 이미지 위 어두운 레이어 */
+
+.morphix-value-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  z-index: 1;
+}
+
+
+/* 이미지 중앙 텍스트 */
+
+.morphix-value-text {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 88%;
+
+  text-align: center;
+  color: #ffffff;
+
+  z-index: 2;
+}
+
+
+.morphix-value-text h3 {
+  margin: 0 0 1.2cqw;
+
+  font-size: 2cqw;
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+
+.morphix-value-text p {
+  margin: 0;
+
+  font-size: 1cqw;
+  line-height: 1.7;
+
+  font-weight: 400;
+
+  color: #ffffff;
+
+  word-break: keep-all;
 }
 
 
@@ -1504,7 +1584,74 @@ nav a {
   width: 80%;
   height: auto;
 
-  margin: 0 auto 6cqw;
+  margin: 0 auto 6.3cqw;
+}
+
+/* ========================================
+   FLAVOR INFORMATION
+======================================== */
+
+.morphix-flavor-info-grid {
+  width: 100%;
+
+  padding: 0 5cqw;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 0;
+
+  color: #ffffff;
+
+  margin-bottom: 1.8cqw;
+}
+
+
+.morphix-flavor-info {
+  padding: 0 1.3cqw;
+}
+
+
+.morphix-flavor-info h3 {
+  margin: 0 0 0.45cqw;
+
+  font-size: 1.6cqw;
+  line-height: 1;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+.morphix-flavor-info strong {
+  display: block;
+
+  margin-bottom: 1.2cqw;
+
+  font-size: 0.72cqw;
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.morphix-flavor-info p {
+  margin: 0;
+
+  font-size: 0.8cqw;
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  color: #dddddd;
+
+  word-break: keep-all;
+
+  text-align: center;
 }
 
 
@@ -1530,6 +1677,27 @@ nav a {
   height: auto;
 }
 
+
+/* ========================================
+   garphic motion
+========================================= */
+
+.morphix-motion {
+  width: 100%;
+  margin: 0;
+  padding: 10cqw 0; 
+  background: #000;
+  overflow: hidden;
+}
+
+.morphix-motion-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  filter: contrast(1.1) brightness(0.92);
+}
 
 
 /* ========================================
@@ -1632,7 +1800,7 @@ nav a {
 .morphix-experience-text h2 {
   margin: 0 0 1.4cqw;
 
-  font-size: 1.6cqw;
+  font-size: 1.8cqw;
   line-height: 1.15;
 
   letter-spacing: -0.03em;
@@ -1643,7 +1811,7 @@ nav a {
 .morphix-experience-text p {
   margin: 0;
 
-  font-size: 0.8cqw;
+  font-size: 0.9cqw;
   line-height: 1.8;
 
   color: #ffffff;
@@ -1739,7 +1907,7 @@ nav a {
 /* 공통 project-hero 구조 그대로 사용 */
 
 .sinect-hero-logo {
-  width: 70%;
+  width: 60%;
 }
 
 
@@ -1749,21 +1917,67 @@ nav a {
 ======================================== */
 
 .sinect-overview {
+  position: relative;
   width: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  background: #ffffff;
+  height: 50cqw;   /* 이 값을 줄일수록 위쪽이 더 잘림 */
+  overflow: hidden;
+  background: #2b2018;
 }
 
-.sinect-overview img {
+.sinect-overview-bg {
   display: block;
-
   width: 100%;
-  height: auto;
+  height: 100%;
 
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* 텍스트 전체 위치 */
+.sinect-overview-content {
+  position: absolute;
+
+  top: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 75%;
+  text-align: center;
+
+  color: #fff;
+  z-index: 2;
+}
+
+/* Overview & Goals */
+.sinect-overview-label {
+  margin: 0 0 2.2cqw;
+
+  font-size: 1.2cqw;
+  font-weight: 600;
+
+  color: #ff7200;
+}
+
+/* Preventive Mental Wellbeing */
+.sinect-overview-content h2 {
+  margin: 0 0 1.4cqw;
+
+  font-size: 2.2cqw;
+  line-height: 1.2;
+  font-weight: 00;
+
+  color: #fff;
+}
+
+/* 설명 */
+.sinect-overview-description {
   margin: 0;
+
+  font-size: 1cqw;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.78);
 }
 
 
@@ -1809,7 +2023,7 @@ nav a {
 ======================================== */
 
 .sinect-values-heading {
-  width: 62%;
+  width: 70%;
   margin: 0 0 3cqw;
 }
 
@@ -1817,9 +2031,9 @@ nav a {
 /* Brand Story & Value */
 
 .sinect-values-label {
-  margin: 0 0 0.7cqw;
+  margin: 0 0 0.9cqw;
 
-  font-size: 1cqw;
+  font-size: 1.3cqw;
   font-weight: 600;
 
   color: #ff8c00;
@@ -1829,7 +2043,7 @@ nav a {
 /* Better Work... */
 
 .sinect-values-heading h2 {
-  margin: 0 0 1.4cqw;
+  margin: 0 0 1.6cqw;
 
   font-size: 3cqw;
   line-height: 1.15;
@@ -1845,8 +2059,9 @@ nav a {
 .sinect-values-description {
   margin: 0;
 
-  font-size: 1.1cqw;
+  font-size: 1.2cqw;
   line-height: 1.8;
+  font-weight: 500;
 
   color: #4a403b;
 
@@ -1859,21 +2074,63 @@ nav a {
 
 .sinect-logo-system {
   width: 100%;
-
-  padding: 4cqw 6cqw;
-
-  background: #6d675c;
+  height: 28cqw;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #918b80 0%,
+      #665d52 38%,
+      #3b2c21 100%
+    );
+
+  color: #fff;
+  text-align: center;
+
+  container-type: inline-size;
 }
 
 
-.sinect-logo-system img {
+/* Logo System */
+.sinect-logo-label {
+  margin: 0 0 3cqw;
+
+  font-size: 1.1cqw;
+  line-height: 1;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+/* 주황색 로고 */
+.sinect-logo-image {
   display: block;
 
-  width: 45%;
+  width: 20%;
+  max-width: none;
   height: auto;
+
+  margin: 0 0 2.4cqw;
+}
+
+
+/* 설명 */
+.sinect-logo-description {
+  margin: 0;
+
+  font-size: 1cqw;
+  line-height: 1.75;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  word-break: keep-all;
 }
 
 
@@ -1910,20 +2167,18 @@ nav a {
 
 .sinect-identity-bottom {
   width: 100%;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 0;
+  align-items: stretch;
 }
 
 
 .sinect-identity-bottom img {
   display: block;
-
   width: 100%;
-  height: auto;
-
+  height: 100%;
+  object-fit: cover;
   margin: 0;
 }
 
