@@ -10,30 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
 
-    const hero = document.querySelector('.index-hero');
-
-    function updateHeroDarkness() {
-      const heroHeight = hero.offsetHeight;
-      const scrollAmount = window.scrollY;
-
-      let progress = scrollAmount / heroHeight;
-
-      progress = Math.max(0, Math.min(progress, 1));
-
-      const brightness = 1 - (progress * 0.9);
-
-      hero.style.filter = `brightness(${brightness})`;
-    }
-
-    window.addEventListener('scroll', updateHeroDarkness);
-
-    updateHeroDarkness();
-
-  });
-</script>
 
 <body>
 
@@ -71,21 +48,19 @@
         muted
         loop
         playsinline
+        preload="auto"
       >
         <source
           src="videos/index-bg.mp4"
           type="video/mp4"
         >
-      </video>
-
-
-      <div class="index-hero-overlay"></div>
+     </video>
 
 
       <div class="index-hero-title">
 
         <h1>
-          V=V<sub>0</sub>+at
+          PORTFOILO
         </h1>
 
         <p>
@@ -109,6 +84,8 @@
 
 <section class="about" id="about">
 
+
+
   <div class="about-main">
 
 
@@ -123,36 +100,7 @@
       </h2>
 
 
-      <!-- FORMULA -->
-      <div class="about-formula">
-
-        <div class="formula-item">
-          <strong>V</strong>
-          <span>현재 속도</span>
-        </div>
-
-        <div class="formula-symbol">=</div>
-
-        <div class="formula-item">
-          <strong>V₀</strong>
-          <span>처음 속도</span>
-        </div>
-
-        <div class="formula-symbol">+</div>
-
-        <div class="formula-item">
-          <strong>a</strong>
-          <span>방향/가속도</span>
-        </div>
-
-        <div class="formula-symbol">×</div>
-
-        <div class="formula-item">
-          <strong>t</strong>
-          <span>시간</span>
-        </div>
-
-      </div>
+      
 
 
       <p class="about-description">
