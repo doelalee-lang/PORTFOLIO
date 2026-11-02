@@ -451,7 +451,7 @@ nav a {
   color: transparent;
   -webkit-text-fill-color: transparent;
 
-  -webkit-text-stroke: 1px #777777;
+  -webkit-text-stroke: 0.6px #777777;
 }
 
 
